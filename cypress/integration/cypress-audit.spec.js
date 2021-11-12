@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Airbnb website', () => {
+describe('Personal Blog', () => {
   it('should run lighthouse performance audits using default thresholds', () => {
     cy.visit('/');
     cy.lighthouse();
@@ -18,7 +18,8 @@ describe('Airbnb website', () => {
     };
 
     const lighthouseConfig = {
-      emulatedFormFactor: 'desktop',
+      formFactor: 'desktop',
+      screenEmulation: { disabled: true },
     };
 
     cy.visit('/');
